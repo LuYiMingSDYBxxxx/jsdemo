@@ -1,0 +1,11 @@
+{
+  "name": "lc-lym-tabledemo",
+  "version": "1.0.0",
+  "description": "*  createtable.Js 暴露了 MixiTable 类，支持生成 普通表格 & 第一列为竖向表格头的 特殊表格 \r  *  \r  *  @param options.tbHead 格式规约\r  *          [{\r  *              label: '检查情况', \r  *              key: 'title' \r  *          },{\r  *              label: '设计建造',    @rules // 表格头内容\r  *              key: 'sjjz'          @rules // 表格头对应的表格数据项的key\r  *          }]\r  *  @param options.tbData 格式规约\r  *          [{\r  *              'title': '管理制度',                           @rules // 如果需要第一列生成多列竖向表格头，则存在 children 字段 ，title 存放 每一列的内容\r  *              'children': [{\r  *                  'title' : '探伤装置的领取、归还和登记制度',\r  *                  'sjjz' : '12',\r  *                  'yxzt' : '123',\r  *                  'bz' : '1234'\r  *              },{\r  *                  'title' : '放射源台帐和定期清点检查制度（明确每枚放射源与探伤装置的对应关系）',\r  *                  'sjjz' : '12',\r  *                  'yxzt' : '123',\r  *                  'bz' : '1234'\r  *              }]\r  *              \r  *          },{\r  *              'title': '辐射安全防护设施与运行',               @rules //如果第一列不存在多列竖向表格头 则为正常的单层对象\r  *              'sjjz' : '12',\r  *              'yxzt' : '123',\r  *              'bz' : '1234'\r  *          }]",
+  "main": "createtable.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}

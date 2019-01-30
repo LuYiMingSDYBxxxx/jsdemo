@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>这是createtable的示例demo</title>
+    <link rel="stylesheet" href="./css/table.css">
+    <script src="./js/createtable.js"></script>
+</head>
+<body>
+    <div class="tableBox"></div>
+    
+</body>
+    <script>
+        //表格头数据
+        function tableHead(){
+            return [{
+                label: '检查情况',
+                key: 'title'
+            },{
+                label: '设计建造',
+                key: 'sjjz'
+            },{
+                label: '运行状态',
+                key: 'yxzt'
+            },{
+                label: '备注',
+                key: 'bz'
+            }]
+        }
+        //表格内容数据
+        function tableData(data){
+        // return  [{
+        //     'title': '辐射安全防护设施与运行',
+        //     'sjjz' : '12',
+        //     'yxzt' : '123',
+        //     'bz' : '1234'
+        // },{
+        //     'title': '辐射安全防护设施与运行',
+        //     'sjjz' : '12',
+        //     'yxzt' : '123',
+        //     'bz' : '1234'
+        // }]
+            return [{
+                    'title': '管理制度',
+                    'children': [{
+                        'title' : '探伤装置的领取、归还和登记制度',
+                        'sjjz' : '12',
+                        'yxzt' : '123',
+                        'bz' : '1234'
+                    },{
+                        'title' : '放射源台帐和定期清点检查制度（明确每枚放射源与探伤装置的对应关系）',
+                        'sjjz' : '12',
+                        'yxzt' : '123',
+                        'bz' : '1234'
+                    }]
+                    
+                },{
+                'title': '辐射安全防护设施与运行1213',
+                'children': [{
+                    'title': 'A库房和调试场所2131',
+                    'children': [{
+                        'title': '双人双锁1',
+                        'children': {
+                            'sjjz': '12',
+                            'yxzt': '123',
+                            'bz': '1234'
+                        }
+                    },{
+                        'title': '非法入侵报警装置1231',
+                        'children': {
+                            'sjjz': '12',
+                            'yxzt': '123',
+                            'bz': '1234'
+                        }
+                        
+                    }]
+                },{
+                    'title': 'B库房和调试场所xxxxb',
+                    'children': [{
+                        'title': '双人双锁2',
+                        'children': {
+                            'sjjz': '12',
+                            'yxzt': '123',
+                            'bz': '1234'
+                        }
+                    },{
+                        'title': '非法入侵报警装置xxxx',
+                        'children': {
+                            'sjjz': '12',
+                            'yxzt': '123',
+                            'bz': '1234'
+                        }
+                    }]
+                }]
+            },{
+                'title': '辐射安全防护设施与运行11',
+                'children': [{
+                    'title': 'A库房和调试场所2132',
+                        'children': {
+                            'sjjz': '12',
+                            'yxzt': '123',
+                            'bz': '1234'
+                        }
+                    
+                },{
+                    'title': 'B库房和调试场所12',
+                    'children': [{
+                        'title': '双人双锁4',
+                        'children': {
+                            'sjjz': '12',
+                            'yxzt': '123',
+                            'bz': '1234'
+                        }
+                    },{
+                        'title': '非法入侵报警装置213',
+                        'children': {
+                            'sjjz': '12',
+                            'yxzt': '123',
+                            'bz': '1234'
+                        }
+                    }]
+                }]
+            }]
+        }   
+        var table = new MixiTable({
+            el:'#tableBox',
+            tbData: tableData(),
+            tbHead: tableHead()
+        });
+
+    </script>    
+</html>

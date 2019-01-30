@@ -1,0 +1,20 @@
+$tb_border_color : #000; 
+$tb_border_width : 1px;
+$tb_th_border_color : #000;
+$tb_th_border_width : 1px;
+$tb_td_border_color : #000;
+$tb_td_border_width : 1px;
+
+.el_lym_tbwrap{
+    border: $tb_border_width solid $tb_border_color;
+    border-collapse: collapse;
+    th{
+        border: $tb_th_border_width solid $tb_th_border_color;
+    }
+    td{
+        border: $tb_th_border_width solid $tb_td_border_color;   
+        line-height: 50px;
+        text-align: center;
+        padding: 0 20px
+    }
+}

@@ -1,0 +1,15 @@
+.el_lym_tbwrap {
+  border: 1px solid #000;
+  border-collapse: collapse;
+}
+
+.el_lym_tbwrap th {
+  border: 1px solid #000;
+}
+
+.el_lym_tbwrap td {
+  border: 1px solid #000;
+  line-height: 50px;
+  text-align: center;
+  padding: 0 20px;
+}
